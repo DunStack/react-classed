@@ -1,4 +1,16 @@
-import { classed } from '../lib/main'
+import classed, { variant } from '../lib/main'
+
+export const Button = classed('button', 'button', {
+  variant: variant({
+    contained: 'contained',
+    outlined: 'outlined'
+  }, { default: 'contained'}),
+  size: variant({
+    lg: 'lg',
+    md: 'md',
+    sm: 'sm'
+  })
+})
 
 function UnclassedLink(props: React.ComponentProps<'a'>) {
   return <a {...props} target='_blank' />
