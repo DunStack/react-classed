@@ -1,6 +1,7 @@
 import { useState } from "react"
 import viteLogo from './vite.svg'
 import typescriptLogo from './typescript.svg'
+import { Link, Card, Docs } from "./components"
 import './App.css'
 
 export default function App() {
@@ -8,21 +9,21 @@ export default function App() {
 
   return (
     <div>
-      <a href="https://vitejs.dev" target="_blank">
+      <Link href="https://vitejs.dev">
         <img src={viteLogo} className="logo" alt="Vite logo" />
-      </a>
-      <a href="https://www.typescriptlang.org/" target="_blank">
+      </Link>
+      <Link href="https://www.typescriptlang.org/">
         <img src={typescriptLogo} className="logo vanilla" alt="TypeScript logo" />
-      </a>
+      </Link>
       <h1>Vite + TypeScript</h1>
-      <div className="card">
+      <Card>
         <button id="counter" type="button" onClick={() => setCount(count + 1)}>
           count is {count}
         </button>
-      </div>
-      <p className="read-the-docs">
+      </Card>
+      <Docs>
         Click on the Vite and TypeScript logos to learn more
-      </p>
+      </Docs>
   </div>
   )
 }
